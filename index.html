@@ -480,6 +480,10 @@ body{background:var(--ground)}
 .phone{width:100%!important;max-width:100%!important;border-radius:0!important;padding:0!important;box-shadow:none!important;background:var(--ground)!important;position:static!important}
 .screen{height:100dvh!important;border-radius:0!important;max-width:560px;width:100%;margin:0 auto}
 .statusbar{display:none!important}
+/* Celular: cobre a tela inteira, grudado nas 4 bordas (resolve sobras em navegadores mobile). */
+@media (max-width:700px){
+  .screen{position:fixed!important;inset:0!important;height:auto!important;max-width:none!important;width:auto!important;margin:0!important}
+}
 </style>
 
 <div class="wrap">
