@@ -471,6 +471,20 @@ svg.chart{display:block;width:100%;height:auto;overflow:visible}
 .rule{height:1px;background:var(--line);margin:24px 0}
 .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:13px;max-width:74ch}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* SÓ O APP — esconde a página de apresentação (título, painel explicativo, rodapé) em TODAS as telas. */
+.masthead,.side,.foot{display:none!important}
+.stage{grid-template-columns:1fr!important;justify-items:center;gap:0;margin-top:0}
+.wrap{padding:26px 16px}
+.phone{position:static!important;margin:0 auto}
+/* No celular, o app ocupa a tela inteira (sem moldura). */
+@media (max-width:700px){
+  body{background:var(--ground)}
+  .wrap{max-width:100%;margin:0;padding:0}
+  .stage{justify-items:stretch}
+  .phone{width:100%;max-width:100%;border-radius:0;padding:0;box-shadow:none;background:var(--ground)}
+  .screen{height:100dvh;border-radius:0}
+  .statusbar{display:none}
+}
 </style>
 
 <div class="wrap">
